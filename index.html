@@ -32,3 +32,84 @@
 </html>
 
 <a href="aboutme.html">Visit aboutme!</a>
+
+<hr>
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+    <h1>Food Recommended</h1>
+
+<table style="width:100%">
+    <tr>
+      <th>Food</th>
+      <th>Available Location</th>
+      <th>Cost to Prepare</th>
+    </tr>
+    <tr>
+      <td>Dum Biriyani</td>
+      <td>Hyderabad, India</td>
+      <td>3 - 5$</td>
+    </tr>
+    <tr>
+      <td>Shawarma</td>
+      <td>Hyderabad, India</td>
+      <td>	1 - 2$</td>
+    <tr>
+        <td>Apricot Delight</td>
+        <td>Hyderabad, India</td>
+        <td>	1 - 2$</td>
+     </tr>
+    <tr>
+        <td>Lassi or Falooda</td>
+        <td>Hyderabad, India</td>
+        <td>	1 - 2$</td>
+     </tr>
+    </tr>
+  </table>
+
+</body>
+</html>
+
+<hr>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Oriented area of a triangle</h1>
+
+<blockquote>Most commonly used geometry technology can easily handle the area of general polygons, given by a sequence of points in the plane, 
+  without ever considering convexity or self-intersection. The way they do this is by using formulas that assign to each triangle an "algebraic area,
+  " which is the usual area if the triangle is oriented in a counterclockwise matter, and the negative of that area if the triangle is oriented clockwise.
+   It is worth noting that this choice of sign is completely arbitrary: things would work just as well if the opposite convention were chosen.</blockquote>
+
+</body>
+</html>
+
+  <pre>
+    int signed_area_parallelogram(point2d p1, point2d p2, point2d p3) {
+      return cross(p2 - p1, p3 - p2);
+    } 
+  
+  double triangle_area(point2d p1, point2d p2, point2d p3) {
+      return abs(signed_area_parallelogram(p1, p2, p3)) / 2.0;
+    }
+  
+  bool clockwise(point2d p1, point2d p2, point2d p3) {
+      return signed_area_parallelogram(p1, p2, p3) < 0;
+    }
+  
+  bool counter_clockwise(point2d p1, point2d p2, point2d p3) {
+      return signed_area_parallelogram(p1, p2, p3) > 0;
+    }
+  </pre>
+
+
+
